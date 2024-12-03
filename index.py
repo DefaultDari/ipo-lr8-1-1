@@ -102,7 +102,6 @@ def exit():
 def main(): # Функция main вызывающая все остальные функции
     while run:
         menu()
-
         num = int(input("Введите номер действия: "))
 
         if num == 1:
