@@ -53,7 +53,7 @@ def fish():
     # Обработка действия 3: Добавление новой записи.
 def add(): 
         global counter
-        id = int(input("Введите номер рыбы: "))         
+        id = max(fish['id'] for fish in data) + 1 if data else 1 # Находим максимально существующий id
         name = input("Введите общее название рыбы: ")  
         latin_name = input("Введите латинское название рыбы: ")  
         is_salt_water_fish = input("Введите, является ли рыба пресноводной (да/нет): ")  
