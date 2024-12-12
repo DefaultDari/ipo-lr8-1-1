@@ -56,6 +56,7 @@ def main(): # Функция main вызывающая все остальные
         is_salt_water_fish = input("Введите, является ли рыба пресноводной (да/нет): ") 
         sub_type_count = input("Введите количество подвидов этой рыбы: ")
         while not sub_type_count.isdigit():
+            print("Некорректный ввод")
             sub_type_count = input("Введите количество подвидов этой рыбы: ")
         # Формируем новый объект записи.
         new_fish = {
