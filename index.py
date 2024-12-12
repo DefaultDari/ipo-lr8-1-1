@@ -53,8 +53,10 @@ def main(): # Функция main вызывающая все остальные
         id = max(fish['id'] for fish in data) + 1 if data else 1 # Находим максимально существующий id
         name = input("Введите общее название рыбы: ")  
         latin_name = input("Введите латинское название рыбы: ")  
-        is_salt_water_fish = input("Введите, является ли рыба пресноводной (да/нет): ")  
+        is_salt_water_fish = input("Введите, является ли рыба пресноводной (да/нет): ") 
         sub_type_count = input("Введите количество подвидов этой рыбы: ")
+        while not sub_type_count.isdigit():
+            sub_type_count = input("Введите количество подвидов этой рыбы: ")
         # Формируем новый объект записи.
         new_fish = {
             'id': id,
